@@ -15,9 +15,9 @@ namespace model
             {
                 context = new ThiTracNgiem();
             }
-        public List<AdminAccount> listAll()
+        public List<Admin> listAll()
         {
-            var list = context.Database.SqlQuery<AdminAccount>("Sp_AdminAccount_ListAll").ToList();
+            var list = context.Database.SqlQuery<Admin>("Quiz_Account_ListAll").ToList();
             return list;
         }
         }

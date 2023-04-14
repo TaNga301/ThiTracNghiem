@@ -11,7 +11,9 @@
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Quản lý tài khoản</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-puzzle-piece"></i><a href="~/Areas/Admin/Views/AdminAccount/Index.cshtml">cộng tác viên</a></li>
+                        <li><i class="fa fa-puzzle-piece"></i>
+                            @Html.ActionLink("Danh Sách Tài Khoản ","Index","AdminAccount",new { area ="Admin"},new { })
+                        </li>
                         @*<li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>
                         <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
 
