@@ -1,0 +1,58 @@
+﻿@model IEnumerable<model.Framework.User>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-11">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Danh sách tài khoản người luyện thi</strong><a>
+                @Html.ActionLink("Thêm", "Create", new { @Controller = "User" }, new { @class = "btn btn-primary btn-sm" })
+            </a>
+        </div>
+        <div class="table-stats order-table ov-h">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.firstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.lastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.userpass)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.firstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.lastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.userpass)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Cập nhật", "Edit", new { id = item.user_id }, new { @class = "btn btn-outline-primary btn-sm" }) |
+                            @Html.ActionLink("Chi tiết", "Details", new { id = item.user_id }, new { @class = "btn btn-outline-secondary btn-sm" }) |
+                            @Html.ActionLink("Xóa", "Delete", new { id = item.user_id }, new { @class = "btn btn-outline-danger btn-sm" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>
