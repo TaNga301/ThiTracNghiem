@@ -15,17 +15,20 @@ namespace model.Framework
             Results = new HashSet<Result>();
         }
 
+        [Key]
+        public int user_id { get; set; }
+
+        [StringLength(10)]
+        public string firstName { get; set; }
+
+        [StringLength(50)]
+        public string lastName { get; set; }
+
         [StringLength(50)]
         public string userpass { get; set; }
 
         [StringLength(50)]
         public string username { get; set; }
-
-        [Key]
-        public int user_id { get; set; }
-
-        [StringLength(50)]
-        public string lastName { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? birthday { get; set; }
@@ -38,9 +41,6 @@ namespace model.Framework
 
         [StringLength(250)]
         public string address { get; set; }
-
-        [StringLength(10)]
-        public string firstName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Result> Results { get; set; }

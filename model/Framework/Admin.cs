@@ -15,19 +15,21 @@ namespace model.Framework
             Subjects = new HashSet<Subject>();
         }
 
-        public int? role_id { get; set; }
+        [StringLength(50)]
+        public string lastName { get; set; }
+
+        [StringLength(10)]
+        public string firstName { get; set; }
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int admin_id { get; set; }
 
         [StringLength(50)]
         public string user_name { get; set; }
 
         [StringLength(50)]
         public string user_pass { get; set; }
-
-        [Key]
-        public int admin_id { get; set; }
-
-        [StringLength(50)]
-        public string admin_name { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? birthday { get; set; }
@@ -40,6 +42,8 @@ namespace model.Framework
 
         [StringLength(250)]
         public string address { get; set; }
+
+        public int? role_id { get; set; }
 
         public virtual Role Role { get; set; }
 

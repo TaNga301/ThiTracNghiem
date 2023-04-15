@@ -26,6 +26,10 @@ namespace model.Framework
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Admin>()
+                .Property(e => e.firstName)
+                .IsFixedLength();
+
             modelBuilder.Entity<Exam>()
                 .HasMany(e => e.Results)
                 .WithRequired(e => e.Exam)

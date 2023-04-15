@@ -39,7 +39,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // GET: Admin/Subject/Create
         public ActionResult Create()
         {
-            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "admin_name");
+            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "firstName,lastName");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "admin_name", subject.admin_id);
+            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "firstName,lastName", subject.admin_id);
             return View(subject);
         }
 
@@ -73,7 +73,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "admin_name", subject.admin_id);
+            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "firstName,lastName", subject.admin_id);
             return View(subject);
         }
 
@@ -90,7 +90,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "admin_name", subject.admin_id);
+            ViewBag.admin_id = new SelectList(db.Admins, "admin_id", "firstName,lastName", subject.admin_id);
             return View(subject);
         }
 

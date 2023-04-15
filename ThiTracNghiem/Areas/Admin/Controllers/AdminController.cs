@@ -60,7 +60,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "admin_id,role_id,user_name,user_pass,admin_name,birthday,email,phone,address")] model.Framework.Admin admin)
+        public ActionResult Create([Bind(Include = "admin_id,role_id,user_name,user_pass,firstName,lastName,birthday,email,phone,address")] model.Framework.Admin admin)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "admin_id,role_id,user_name,user_pass,admin_name,birthday,email,phone,address")] model.Framework.Admin admin)
+        public ActionResult Edit([Bind(Include = "admin_id,role_id,user_name,user_pass,firstName,lastName,birthday,email,phone,address")] model.Framework.Admin admin)
         {
             if (ModelState.IsValid)
             {

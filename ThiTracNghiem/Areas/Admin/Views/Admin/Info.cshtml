@@ -33,20 +33,21 @@
                                         {
                                             <tr>
                                                 <td>@i</td>
-                                                <td>@Admin.admin_name</td>
+                                                <td>@Admin.firstName</td>
+                                                <td>@Admin.lastName</td>
                                                 <td>@Admin.birthday</td>
                                                 <td>@Admin.email</td>
                                                 <td>@Admin.phone</td>
                                                 <td>@Admin.address</td>
-                                                <td>
+                                                @*<td>
                                                     @Html.ActionLink("Cập nhật", "Edit", new { id = Admin.admin_id }, new { @class = "btn btn-outline-primary btn-sm" })
-                                                </td>
+                                                </td>*@
                                                 <td>
                                                     @Html.ActionLink("Chi tiết", "Details", new { id = Admin.admin_id }, new { @class = "btn btn-outline-secondary btn-sm" })
                                                 </td>
-                                                <td>
+                                                @*<td>
                                                     @Html.ActionLink("Xóa", "Delete", new { id = Admin.admin_id }, new { @class = "btn btn-outline-danger btn-sm" })
-                                                </td>
+                                                </td>*@
                                             </tr>
                                             i++;
                                         }
