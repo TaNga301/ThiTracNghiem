@@ -24,6 +24,14 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
             //var admins = db.Admins.Include(a => a.Role);
             //return View(admins.ToList());
         }
+        public ActionResult Info()
+        {
+            var iplAdmin = new AdminModel();
+            var model = iplAdmin.listAll();
+            return View(model);
+            //var admins = db.Admins.Include(a => a.Role);
+            //return View(admins.ToList());
+        }
 
         // GET: Admin/Admin/Details/5
         public ActionResult Details(int? id)

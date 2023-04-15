@@ -10,112 +10,107 @@ using model.Framework;
 
 namespace ThiTracNghiem.Areas.Admin.Controllers
 {
-    public class UserController : Controller
+    public class ExamController : Controller
     {
         private ThiTracNgiem db = new ThiTracNgiem();
 
-        // GET: Admin/User
+        // GET: Admin/Exam
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return View(db.Exams.ToList());
         }
 
-        public ActionResult Info()
-        {
-            return View(db.Users.ToList());
-        }
-
-        // GET: Admin/User/Details/5
+        // GET: Admin/Exam/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
-            if (user == null)
+            Exam exam = db.Exams.Find(id);
+            if (exam == null)
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View(exam);
         }
 
-        // GET: Admin/User/Create
+        // GET: Admin/Exam/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/User/Create
+        // POST: Admin/Exam/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "user_id,userpass,username,lastName,birthday,email,phone,address,firstName")] User user)
+        public ActionResult Create([Bind(Include = "exam_id,tile,exame_time,publishDate")] Exam exam)
         {
             if (ModelState.IsValid)
             {
-                db.Users.Add(user);
+                db.Exams.Add(exam);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(user);
+            return View(exam);
         }
 
-        // GET: Admin/User/Edit/5
+        // GET: Admin/Exam/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
-            if (user == null)
+            Exam exam = db.Exams.Find(id);
+            if (exam == null)
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View(exam);
         }
 
-        // POST: Admin/User/Edit/5
+        // POST: Admin/Exam/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "user_id,userpass,username,lastName,birthday,email,phone,address,firstName")] User user)
+        public ActionResult Edit([Bind(Include = "exam_id,tile,exame_time,publishDate")] Exam exam)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(user).State = EntityState.Modified;
+                db.Entry(exam).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(user);
+            return View(exam);
         }
 
-        // GET: Admin/User/Delete/5
+        // GET: Admin/Exam/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
-            if (user == null)
+            Exam exam = db.Exams.Find(id);
+            if (exam == null)
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View(exam);
         }
 
-        // POST: Admin/User/Delete/5
+        // POST: Admin/Exam/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            User user = db.Users.Find(id);
-            db.Users.Remove(user);
+            Exam exam = db.Exams.Find(id);
+            db.Exams.Remove(exam);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

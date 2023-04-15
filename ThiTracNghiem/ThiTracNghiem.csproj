@@ -131,6 +131,7 @@
     <Compile Include="Areas\Admin\Code\CustomMembershipProvider.cs" />
     <Compile Include="Areas\Admin\Code\SessionHelper.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ExamController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\SubjectController.cs" />
@@ -240,6 +241,13 @@
     <Content Include="Assets\Admin\fonts\icomoon\icomoon.woff" />
     <Content Include="Assets\Admin\scss\style.css.map" />
     <Content Include="Assets\Admin\scss\style.scss" />
+    <Content Include="Areas\Admin\Views\Exam\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Exam\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Exam\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Exam\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Exam\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Info.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Info.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
