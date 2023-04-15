@@ -1,7 +1,8 @@
-namespace model.Framework
+﻿namespace model.Framework
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -19,11 +20,20 @@ namespace model.Framework
         [Key]
         public int exam_id { get; set; }
 
+
+        [DisplayName("Tên đề thi")]
+        [Required]
         [StringLength(250)]
         public string tile { get; set; }
 
+        [DisplayName("Thời gian làm bài thi")]
+        [Required]
+        
         public TimeSpan? exame_time { get; set; }
 
+        [DisplayName("Ngày cập nhật")]
+        [Required]
+        [Column(TypeName = "date")]
         public DateTime? publishDate { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -2,6 +2,7 @@ namespace model.Framework
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -19,6 +20,8 @@ namespace model.Framework
         [Key]
         public int subject_id { get; set; }
 
+        [DisplayName("Tên môn thi")]
+        [Required]
         [StringLength(50)]
         public string subject_name { get; set; }
 

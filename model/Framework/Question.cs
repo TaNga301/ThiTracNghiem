@@ -1,7 +1,8 @@
-namespace model.Framework
+﻿namespace model.Framework
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -19,16 +20,23 @@ namespace model.Framework
         public int question_id { get; set; }
 
         [StringLength(250)]
+        [DisplayName("Câu hỏi")]
+        [Required]
         public string question_text { get; set; }
 
+        [DisplayName("Đáp án A")]
         public string awnser_A { get; set; }
 
+        [DisplayName("Đáp án B")]
         public string awnser_B { get; set; }
 
+        [DisplayName("Đáp án C")]
         public string awnser_C { get; set; }
 
+        [DisplayName("Đáp án D")]
         public string awnser_D { get; set; }
 
+        [DisplayName("Đáp án chính xác")]
         public string correctAwnser { get; set; }
 
         public int? level_id { get; set; }

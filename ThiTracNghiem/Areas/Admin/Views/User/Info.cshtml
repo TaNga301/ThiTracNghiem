@@ -21,8 +21,7 @@
                                     <thead>
                                         <tr role="row">
                                             <th>#</th>
-                                            <th>Họ</th>
-                                            <th>Tên</th>
+                                            <th>Họ Tên</th>
                                             <th>Ngày sinh</th>
                                             <th>Email</th>
                                             <th>Số điện thoại</th>
@@ -33,9 +32,8 @@
                                         {
                                             <tr>
                                                 <td>@i</td>
-                                                <td>@User.firstName</td>
-                                                <td>@User.lastName</td>
-                                                <td>@User.birthday</td>
+                                                <td>@User.firstName @User.lastName</td>
+                                                <td>@User.birthday.Value.ToString("dd/MM/yyyy")</td>
                                                 <td>@User.email</td>
                                                 <td>@User.phone</td>
                                                 <td>@User.address</td>

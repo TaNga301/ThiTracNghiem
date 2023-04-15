@@ -1,7 +1,8 @@
-namespace model.Framework
+﻿namespace model.Framework
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -17,6 +18,9 @@ namespace model.Framework
 
         [Key]
         public int chapter_id { get; set; }
+
+        [DisplayName("Tên chương")]
+        [Required]
 
         [StringLength(50)]
         public string chapter_name { get; set; }

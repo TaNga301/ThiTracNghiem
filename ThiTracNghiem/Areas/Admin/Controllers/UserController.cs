@@ -63,6 +63,8 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
             return View(user);
         }
 
+
+
         // GET: Admin/User/Edit/5
         public ActionResult Edit(int? id)
         {
