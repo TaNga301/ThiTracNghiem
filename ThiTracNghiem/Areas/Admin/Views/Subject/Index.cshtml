@@ -1,0 +1,47 @@
+﻿@model IEnumerable<model.Framework.Subject>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="col-lg-11">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Danh sách môn thi</strong><a>
+    @Html.ActionLink("Thêm", "Create", new { @Controller = "Subject" }, new { @class = "btn btn-primary btn-sm" })
+</a>
+        </div>
+        <div class="table-stats order-table ov-h">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.subject_id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.subject_name)
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.subject_id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.subject_name)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Cập nhật", "Edit", new { id = item.subject_id }) |
+                            @*@Html.ActionLink("Details", "Details", new { id = item.subject_id }) |*@
+                            @Html.ActionLink("Xóa", "Delete", new { id = item.subject_id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

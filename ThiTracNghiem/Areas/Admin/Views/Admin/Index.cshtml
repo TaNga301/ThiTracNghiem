@@ -1,0 +1,52 @@
+﻿@model IEnumerable<model.Framework.Admin>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-11">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Danh sách tài khoản cộng tác viên</strong><a>
+                @Html.ActionLink("Thêm", "Create", new { @Controller = "Admin" }, new { @class = "btn btn-primary btn-sm" })
+            </a>
+        </div>
+        <div class="table-stats order-table ov-h">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.admin_name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.user_name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.user_pass)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.admin_name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.user_name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.user_pass)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.admin_id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.admin_id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.admin_id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

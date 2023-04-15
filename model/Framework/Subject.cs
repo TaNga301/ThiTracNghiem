@@ -12,6 +12,7 @@ namespace model.Framework
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Subject()
         {
+            Chapters = new HashSet<Chapter>();
             Questions = new HashSet<Question>();
         }
 
@@ -24,6 +25,9 @@ namespace model.Framework
         public int? admin_id { get; set; }
 
         public virtual Admin Admin { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Chapter> Chapters { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Question> Questions { get; set; }

@@ -35,10 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -53,18 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminAcountModel.cs" />
+    <Compile Include="AdminLoginModel.cs" />
+    <Compile Include="AdminModel.cs" />
     <Compile Include="Framework\Admin.cs" />
-    <Compile Include="Framework\AdminAccount.cs" />
+    <Compile Include="Framework\Chapter.cs" />
+    <Compile Include="Framework\comment.cs" />
+    <Compile Include="Framework\Exam.cs" />
+    <Compile Include="Framework\Level.cs" />
     <Compile Include="Framework\Question.cs" />
+    <Compile Include="Framework\Result.cs" />
     <Compile Include="Framework\Role.cs" />
     <Compile Include="Framework\Subject.cs" />
+    <Compile Include="Framework\sysdiagram.cs" />
     <Compile Include="Framework\ThiTracNgiem.cs" />
     <Compile Include="Framework\User.cs" />
-    <Compile Include="Framework\UserAccount.cs" />
-    <Compile Include="ListAdminAccountModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

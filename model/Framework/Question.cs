@@ -9,6 +9,12 @@ namespace model.Framework
     [Table("Question")]
     public partial class Question
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Question()
+        {
+            Results = new HashSet<Result>();
+        }
+
         [Key]
         public int question_id { get; set; }
 
@@ -31,6 +37,13 @@ namespace model.Framework
 
         public int? chapter_id { get; set; }
 
+        public virtual Chapter Chapter { get; set; }
+
+        public virtual Level Level { get; set; }
+
         public virtual Subject Subject { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Result> Results { get; set; }
     }
 }

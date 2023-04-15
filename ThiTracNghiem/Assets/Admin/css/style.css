@@ -365,7 +365,7 @@ p:focus {
 a, button {
   text-decoration: none;
   outline: none !important;
-  color: #878787;
+  color: #ffffff;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease; }
 
@@ -558,18 +558,21 @@ canvas {
 /* Global Styles */
 /* Main Styles */
 aside.left-panel {
-  background: #fff;
-  height: 100vh;
-  padding: 0;
-  vertical-align: top;
-  width: 280px;
-  -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  top: 55px;
-  z-index: 999; }
+    background: #fff;
+    height: 100vh;
+    padding: 0;
+    vertical-align: top;
+    width: 280px;
+    -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    z-index: 999;
+    font: normal normal normal 14px/1 FontAwesome;
+
+}
   aside.left-panel:hover {
     overflow-x: scroll; }
 
@@ -602,9 +605,11 @@ aside.left-panel {
     padding: 0;
     text-transform: uppercase;
     width: 100%; }
-  .navbar .navbar-nav {
-    float: none;
-    position: relative; }
+    .navbar .navbar-nav {
+        float: none;
+        position: relative;
+        font-size: xxx-large;
+    }
     .navbar .navbar-nav > li {
       padding-left: 30px;
       padding-right: 30px; }
@@ -622,8 +627,6 @@ aside.left-panel {
         color: #607d8b;
         display: inline-block;
         font-size: 14px;
-        line-height: 26px;
-        padding: 10px 0;
         position: relative;
         width: 100%; }
         .navbar .navbar-nav li > a:hover, .navbar .navbar-nav li > a:hover .menu-icon {
@@ -646,8 +649,10 @@ aside.left-panel {
       .navbar .navbar-nav li.menu-item-has-children {
         position: relative; }
         .navbar .navbar-nav li.menu-item-has-children a {
-          line-height: 30px; }
-          .navbar .navbar-nav li.menu-item-has-children a:before {
+            line-height: 30px;
+            width: auto;
+        }
+          /*.navbar .navbar-nav li.menu-item-has-children a:before {
             content: "";
             position: absolute;
             top: 23px;
@@ -660,7 +665,7 @@ aside.left-panel {
             -webkit-transform: rotate(45deg);
                     transform: rotate(45deg);
             -webkit-transition: all .25s ease;
-            transition: all .25s ease; }
+            transition: all .25s ease; }*/
           .navbar .navbar-nav li.menu-item-has-children a:hover:before {
             border-color: #03a9f3 #03a9f3 transparent transparent; }
         .navbar .navbar-nav li.menu-item-has-children .sub-menu {
@@ -669,7 +674,7 @@ aside.left-panel {
           -webkit-box-shadow: none;
                   box-shadow: none;
           overflow-y: hidden;
-          padding: 0 0 0 35px; }
+          padding: 0 0 0 10px; }
           .navbar .navbar-nav li.menu-item-has-children .sub-menu li {
             position: relative; }
           .navbar .navbar-nav li.menu-item-has-children .sub-menu i {
@@ -2510,5 +2515,27 @@ i.fa.fa-bars {
 .h1, h1 {
     font-size: 2.3rem;
 }
-
+a.fa.fa-power.-off {
+    color: #607d8b;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 2px 10px;
+    margin-right: 10px;
+}
+a.menu-icon.fa.fa-user {
+    padding: 5px 0 8px 0;
+}
+a.menu-icon.fa.fa-book {
+    padding: 4.4px 0 8px 0;
+}
+a.menu-icon.fa.fa-tag {
+    padding: 4.5px 0 8px 0;
+}
+a.menu-icon.fa.fa-pencil {
+    padding: 4.5px 0 8px 0;
+}
+::before {
+    padding: 0 10px 0 0;
+}
 /*# sourceMappingURL=style.css.map */

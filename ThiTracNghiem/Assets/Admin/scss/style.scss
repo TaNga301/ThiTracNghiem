@@ -38,7 +38,7 @@ p:focus {
 a, button {
     text-decoration: none;
     outline: none!important;
-    color: #878787;
+    color: #ffffff;
  
     transition: all 0.25s ease;
 
@@ -273,21 +273,23 @@ canvas {
 /* Global Styles */
 
 /* Main Styles */
- 
+
 aside.left-panel {
-    background: $menu-bg; 
+    background: $menu-bg;
     height: 100vh;
     // min-height: 100%;
     padding: 0;
     vertical-align: top;
     width: 280px;
     // transition: all 0.25s ease;
-    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08); 
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
     position: fixed;
     left: 0;
     bottom: 0;
     top: 55px;
     z-index: 999;
+    font: normal normal normal 14px/1 FontAwesome;
+
     &:hover {
         overflow-x: scroll;
     }
@@ -354,8 +356,6 @@ aside.left-panel {
                 color: $menu-color;
                 display: inline-block; 
                 font-size: 14px;
-                line-height: 26px;
-                padding: 10px 0;
                 position: relative;
                 width: 100%;
                 &:hover,

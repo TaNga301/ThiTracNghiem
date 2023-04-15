@@ -13,16 +13,16 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
     public class LoginController : Controller
     {
         [HttpGet]
-        public ActionResult Login()
+        public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginModel model)
+        public ActionResult Index(LoginModel model)
         {
-            //var result = new AdminAcountModel().AdminLogin(model.user_name, model.user_pass);
+            //var result = new AdminLoginModel().AdminLogin(model.user_name, model.user_pass);
             if(Membership.ValidateUser(model.user_name,model.user_pass) && ModelState.IsValid)
             {
                 //SessionHelper.SetSession(new AdminSession() { user_name = model.user_name });
@@ -38,7 +38,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Login", "Login");
+            return RedirectToAction("Index", "Login");
         }
     }
 }

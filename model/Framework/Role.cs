@@ -12,7 +12,7 @@ namespace model.Framework
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Role()
         {
-            AdminAccounts = new HashSet<AdminAccount>();
+            Admins = new HashSet<Admin>();
         }
 
         [Key]
@@ -22,6 +22,6 @@ namespace model.Framework
         public string role_name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AdminAccount> AdminAccounts { get; set; }
+        public virtual ICollection<Admin> Admins { get; set; }
     }
 }

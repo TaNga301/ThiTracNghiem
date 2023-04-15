@@ -12,9 +12,16 @@ namespace model.Framework
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Admin()
         {
-            AdminAccounts = new HashSet<AdminAccount>();
             Subjects = new HashSet<Subject>();
         }
+
+        public int? role_id { get; set; }
+
+        [StringLength(50)]
+        public string user_name { get; set; }
+
+        [StringLength(50)]
+        public string user_pass { get; set; }
 
         [Key]
         public int admin_id { get; set; }
@@ -34,8 +41,7 @@ namespace model.Framework
         [StringLength(250)]
         public string address { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AdminAccount> AdminAccounts { get; set; }
+        public virtual Role Role { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Subject> Subjects { get; set; }

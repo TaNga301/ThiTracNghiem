@@ -108,7 +108,7 @@ namespace ThiTracNghiem.Areas.Admin.Code
 
         public override bool ValidateUser(string user_name, string user_pass)
         {
-            return new AdminAcountModel().AdminLogin(user_name, user_pass);
+            return new AdminLoginModel().AdminLogin(user_name, user_pass);
         }
     }
 }

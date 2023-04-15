@@ -10,3 +10,15 @@ C:\OneDrive\OneDrive - VLG\Desktop\ThiTracNghiem\model\obj\Debug\Models.csproj.C
 C:\OneDrive\OneDrive - VLG\Desktop\ThiTracNghiem\model\obj\Debug\Models.csproj.CopyComplete
 C:\OneDrive\OneDrive - VLG\Desktop\ThiTracNghiem\model\obj\Debug\model.dll
 C:\OneDrive\OneDrive - VLG\Desktop\ThiTracNghiem\model\obj\Debug\model.pdb
+E:\New folder\ThiTracNgiem\model\bin\Debug\model.dll.config
+E:\New folder\ThiTracNgiem\model\bin\Debug\model.dll
+E:\New folder\ThiTracNgiem\model\bin\Debug\model.pdb
+E:\New folder\ThiTracNgiem\model\bin\Debug\EntityFramework.dll
+E:\New folder\ThiTracNgiem\model\bin\Debug\EntityFramework.SqlServer.dll
+E:\New folder\ThiTracNgiem\model\bin\Debug\EntityFramework.xml
+E:\New folder\ThiTracNgiem\model\bin\Debug\EntityFramework.SqlServer.xml
+E:\New folder\ThiTracNgiem\model\obj\Debug\Models.csproj.AssemblyReference.cache
+E:\New folder\ThiTracNgiem\model\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\New folder\ThiTracNgiem\model\obj\Debug\Models.csproj.CopyComplete
+E:\New folder\ThiTracNgiem\model\obj\Debug\model.dll
+E:\New folder\ThiTracNgiem\model\obj\Debug\model.pdb
