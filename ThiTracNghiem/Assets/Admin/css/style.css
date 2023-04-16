@@ -699,7 +699,7 @@ aside.left-panel {
         .navbar .navbar-nav li.menu-item-has-children.show .sub-menu {
           max-height: 1000px;
           opacity: 1;
-          position: static !important; }
+          /*position: static !important; */}
 
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:focus,
@@ -2503,6 +2503,9 @@ footer.site-footer {
     left: inherit !important;
     right: 20px !important; }
 .fa-user:before {
+    margin-right: 15px;
+}
+.fa-th-list:before {
     margin-right: 15px;
 }
 .fa-book:before {

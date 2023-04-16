@@ -64,11 +64,11 @@
     <Compile Include="Framework\Result.cs" />
     <Compile Include="Framework\Role.cs" />
     <Compile Include="Framework\Subject.cs" />
-    <Compile Include="Framework\sysdiagram.cs" />
     <Compile Include="Framework\ThiTracNgiem.cs" />
     <Compile Include="Framework\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

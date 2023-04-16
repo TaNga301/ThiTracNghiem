@@ -18,11 +18,11 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // GET: Admin/Admin
         public ActionResult Index()
         {
-            var iplAdmin = new AdminModel();
-            var model = iplAdmin.listAll();
-            return View(model);
-            //var admins = db.Admins.Include(a => a.Role);
-            //return View(admins.ToList());
+            //var iplAdmin = new AdminModel();
+            //var model = iplAdmin.listAll();
+            //return View(model);
+            var admins = db.Admins.Include(a => a.Role);
+            return View(admins.ToList());
         }
         public ActionResult Info()
         {
@@ -60,8 +60,9 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "admin_id,role_id,user_name,user_pass,firstName,lastName,birthday,email,phone,address")] model.Framework.Admin admin)
+        public ActionResult Create([Bind(Include = "admin_id,role_id,user_name,user_pass, fullName, ,birthday,email,phone,address")] model.Framework.Admin admin)
         {
+
             if (ModelState.IsValid)
             {
                 db.Admins.Add(admin);
@@ -69,9 +70,10 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.role_id = new SelectList(db.Roles, "role_id", "role_name", admin.role_id);
+            ViewBag.role_id = new SelectList(db.Roles, "role_id", "role_name", admin.role_id).Where(o => o.Value != "0");
             return View(admin);
         }
+
 
         // GET: Admin/Admin/Edit/5
         public ActionResult Edit(int? id)
@@ -94,7 +96,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "admin_id,role_id,user_name,user_pass,firstName,lastName,birthday,email,phone,address")] model.Framework.Admin admin)
+        public ActionResult Edit([Bind(Include = "admin_id,role_id,user_name,user_pass, fullName,birthday,email,phone,address")] model.Framework.Admin admin)
         {
             if (ModelState.IsValid)
             {

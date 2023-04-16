@@ -6,7 +6,7 @@
 <h2>Thông tin người dùng</h2>
 
 <div>
-    <h4>@Html.DisplayFor(model => model.lastName)</h4>
+    <h4>@Html.DisplayFor(model => model.fullName)</h4>
     <hr />
     <dl class="dl-horizontal">
         @*<dt> @Html.DisplayNameFor(model => model.userpass)</dt>
@@ -18,9 +18,9 @@
                 @Html.DisplayFor(model => model.username)
             </dd>*@
         <div class="row">
-        <dt>  @Html.DisplayNameFor(model => model.firstName) @Html.DisplayNameFor(model => model.lastName) : </dt>
+        <dt>  @Html.DisplayNameFor(model => model.fullName)   : </dt>
 
-        <dd> @Html.DisplayFor(model => model.firstName) @Html.DisplayFor(model => model.lastName) </dd>
+        <dd> @Html.DisplayFor(model => model. fullName)  </dd>
 </div>
 <div class="row">
     <dt> @Html.DisplayNameFor(model => model.birthday) : </dt>

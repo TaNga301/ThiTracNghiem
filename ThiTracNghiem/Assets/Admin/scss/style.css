@@ -700,7 +700,7 @@ aside.left-panel {
         .navbar .navbar-nav li.menu-item-has-children.show .sub-menu {
           max-height: 1000px;
           opacity: 1;
-          position: static !important; }
+          /*position: static !important;*/ }
 
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:focus,

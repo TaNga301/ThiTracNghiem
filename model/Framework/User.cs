@@ -18,19 +18,16 @@
 
         [Key]
         public int user_id { get; set; }
-        [DisplayName("Họ")]
+        
 
-        [StringLength(10)]
-        public string firstName { get; set; }
-
-        [DisplayName("Tên")]
+        [DisplayName("Họ tên")]
 
         [StringLength(50)]
-        public string lastName { get; set; }
+        public string fullName { get; set; }
 
         [DisplayName("Mật khẩu")]
         [Required]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$")]
+        //[RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$")]
         [DataType(DataType.Password)]
 
         [StringLength(50)]

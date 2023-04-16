@@ -21,7 +21,7 @@
                                     <thead>
                                         <tr role="row">
                                             <th>#</th>
-                                            <th>Họ Tên</th>
+                                            <th>Họ tên</th>
                                             <th>Ngày sinh</th>
                                             <th>Email</th>
                                             <th>Số điện thoại</th>
@@ -32,7 +32,7 @@
                                         {
                                             <tr>
                                                 <td>@i</td>
-                                                <td>@User.firstName @User.lastName</td>
+                                                <td>@User.fullName</td>
                                                 <td>@User.birthday.Value.ToString("dd/MM/yyyy")</td>
                                                 <td>@User.email</td>
                                                 <td>@User.phone</td>
@@ -41,7 +41,7 @@
                                                     @Html.ActionLink("Cập nhật", "Edit", new { id = User.user_id }, new { @class = "btn btn-outline-primary btn-sm" })
                                                 </td>*@
                                                 <td>
-                                                    @Html.ActionLink("Chi tiết", "Details", new { id = User.user_id }, new { @class = "btn btn-outline-secondary btn-sm" })
+                                                    @Html.ActionLink("Chi tiết", "Details", new { id = User.user_id}, new { @class = "btn btn-outline-secondary btn-sm" })
                                                 </td>
                                                 @*<td>
                                                     @Html.ActionLink("Xóa", "Delete", new { id = User.user_id }, new { @class = "btn btn-outline-danger btn-sm" })

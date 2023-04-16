@@ -9,6 +9,7 @@
 @using (Html.BeginForm())
 {
 @Html.AntiForgeryToken()
+    
                 <div class="col-lg-10">
                     <div class="card">
                         <div class="card-body card-block">
@@ -24,18 +25,14 @@
                                      @Html.EditorFor(model => model.userpass, new { htmlAttributes = new { @class = "form-control" } })
                                      @Html.ValidationMessageFor(model => model.userpass, "", new { @class = "text-danger" })
                                     </div></div>*@
-                                <div class="row">
+                                
                                     <div class="form-group">
                                         <div class="input-group">
-                                            @Html.LabelFor(model => model.firstName, htmlAttributes: new { @class = "control-label col-md-2" })
-                                            @Html.LabelFor(model => model.lastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            @Html.LabelFor(model => model.fullName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                             
+                                            @Html.EditorFor(model => model.fullName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model. fullName, "", new { @class = "text-danger" })
 
-                                            @Html.EditorFor(model => model.firstName, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
-
-                                            @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
-                                        </div>
                                     </div>
                                 </div>
 
@@ -87,7 +84,10 @@
                                 <div class="form-group">
                                     <div style="text-align: center;" @*class="col-md-offset-2 col-md-10"*@>
                                         <input type="submit" value="Xác nhận" class="btn btn-primary" />
-                                        @Html.ActionLink("Hủy", "Index", "User", new { @class = "btn btn-secondary" })
+                                        
+                                        @Html.ActionLink("Hủy", "Index","Admin", new { @class = "btn btn-secondary" })
+                                        @Html.ActionLink("Hủy", "Index", "Admin", new { @class = "btn btn-secondary" }, new { @type = "submit" })
+                                        
                                     </div>
                                 </div>
                             </form>
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                 </div>}
-}
+
 
 @*<div>
     @Html.ActionLink("Back to List", "Index")

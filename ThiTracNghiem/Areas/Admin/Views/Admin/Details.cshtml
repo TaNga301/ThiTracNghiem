@@ -1,12 +1,12 @@
 ﻿@model model.Framework.Admin
 
 @{ ViewBag.Title = "Details";
-                Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
 
 <h2>Thông tin người dùng</h2>
 
 <div>
-    <h4>@Html.DisplayFor(model => model.lastName)</h4>
+    <h4>@Html.DisplayFor(model => model.fullName)</h4>
     <hr />
     <dl class="dl-horizontal">
         @*<dt> @Html.DisplayNameFor(model => model.userpass)</dt>
@@ -18,54 +18,54 @@
                 @Html.DisplayFor(model => model.username)
             </dd>*@
         <div class="row">
-        <dt>  @Html.DisplayNameFor(model => model.firstName) @Html.DisplayNameFor(model => model.lastName) : </dt>
+            <dt>  @Html.DisplayNameFor(model => model.fullName)  : </dt>
 
-        <dd> @Html.DisplayFor(model => model.firstName) @Html.DisplayFor(model => model.lastName) </dd>
-</div>
-<div class="row">
-    <dt> @Html.DisplayNameFor(model => model.birthday) : </dt>
+            <dd> @Html.DisplayFor(model => model.fullName)  </dd>
+        </div>
+        <div class="row">
+            <dt> @Html.DisplayNameFor(model => model.birthday) : </dt>
 
-    <dd> @Model.birthday.Value.ToString("dd/MM/yyyy")</dd>
-</div>
-<div class="row">
-    <dt>
-        @Html.DisplayNameFor(model => model.email)  :
-    </dt>
+            <dd> @Model.birthday.Value.ToString("dd/MM/yyyy")</dd>
+        </div>
+        <div class="row">
+            <dt>
+                @Html.DisplayNameFor(model => model.email)  :
+            </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.email)
-    </dd>
-</div>
-<div class="row">
-    <dt>
-        @Html.DisplayNameFor(model => model.phone) :
-    </dt>
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+        </div>
+        <div class="row">   
+            <dt>
+                @Html.DisplayNameFor(model => model.phone) :
+            </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.phone)
-    </dd>
-</div>
-<div class="row">
-    <dt>
-        @Html.DisplayNameFor(model => model.address) :
-    </dt>
+            <dd>
+                @Html.DisplayFor(model => model.phone)
+            </dd>
+        </div>
+        <div class="row">
+            <dt>
+                @Html.DisplayNameFor(model => model.address) :
+            </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.address)
-    </dd>
-</div>
-<div class="row">
-    <dt>
-        @Html.DisplayNameFor(model => model.Role.role_name)
-    </dt>
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+        </div>
+        <div class="row">
+            <dt>
+                @Html.DisplayNameFor(model => model.Role.role_name) :
+            </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Role.role_name)
-    </dd>
-</div>
-            </dl>
+            <dd>
+                @Html.DisplayFor(model => model.Role.role_name)
+            </dd>
+        </div>
+    </dl>
 </div>
 <p>
-    @Html.ActionLink("Chỉnh sữa", "Edit", new { id = Model.user_id }, new { @class = "btn btn-secondary" }) |
+    @Html.ActionLink("Chỉnh sữa", "Edit", new { id = Model.admin_id }, new { @class = "btn btn-secondary" }) |
     @Html.ActionLink("trở về", "Index", "Admin", new { @class = "btn btn-outline-secondary" })
 </p>

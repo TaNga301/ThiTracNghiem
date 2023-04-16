@@ -28,7 +28,7 @@
 
         [DisplayName("Thời gian làm bài thi")]
         [Required]
-        
+
         public TimeSpan? exame_time { get; set; }
 
         [DisplayName("Ngày cập nhật")]

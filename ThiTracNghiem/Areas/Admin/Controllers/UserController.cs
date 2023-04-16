@@ -51,7 +51,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "user_id,userpass,username,lastName,birthday,email,phone,address,firstName")] User user)
+        public ActionResult Create([Bind(Include = "user_id,userpass,username, ,birthday,email,phone,address,fullName")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ThiTracNghiem.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "user_id,userpass,username,lastName,birthday,email,phone,address,firstName")] User user)
+        public ActionResult Edit([Bind(Include = "user_id,userpass,username, ,birthday,email,phone,address,fullName")] User user)
         {
             if (ModelState.IsValid)
             {

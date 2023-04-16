@@ -1,4 +1,4 @@
-namespace model.Framework
+ï»¿namespace model.Framework
 {
     using System;
     using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace model.Framework
         [Key]
         public int subject_id { get; set; }
 
-        [DisplayName("Tên môn thi")]
+        [DisplayName("Tï¿½n mï¿½n thi")]
         [Required]
         [StringLength(50)]
         public string subject_name { get; set; }

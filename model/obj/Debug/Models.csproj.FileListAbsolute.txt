@@ -46,3 +46,15 @@ C:\OneDrive\OneDrive - VLG\Desktop\tno\New folder\model\obj\Debug\Models.csproj.
 C:\OneDrive\OneDrive - VLG\Desktop\tno\New folder\model\obj\Debug\Models.csproj.CopyComplete
 C:\OneDrive\OneDrive - VLG\Desktop\tno\New folder\model\obj\Debug\model.dll
 C:\OneDrive\OneDrive - VLG\Desktop\tno\New folder\model\obj\Debug\model.pdb
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\bin\Debug\model.dll.config
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\bin\Debug\model.dll
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\bin\Debug\model.pdb
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\bin\Debug\EntityFramework.dll
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\bin\Debug\EntityFramework.SqlServer.dll
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\bin\Debug\EntityFramework.xml
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\bin\Debug\EntityFramework.SqlServer.xml
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\obj\Debug\Models.csproj.CopyComplete
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\obj\Debug\model.dll
+C:\OneDrive\OneDrive - VLG\Desktop\tno\ThiTracNghiem-clone\model\obj\Debug\model.pdb

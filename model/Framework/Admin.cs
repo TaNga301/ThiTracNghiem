@@ -15,19 +15,15 @@
         {
             Subjects = new HashSet<Subject>();
         }
-        [DisplayName("Họ")]
-        [Required]
-        [StringLength(50)]
-        public string lastName { get; set; }
-
-        [DisplayName("Tên")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int admin_id { get; set; }
+        
+        [DisplayName("Họ tên")]
         [Required]
         [StringLength(10)]
-        public string firstName { get; set; }
+        public string fullName { get; set; }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int admin_id { get; set; }
 
         [DisplayName("Tài khoản")]
         [Required]
@@ -37,7 +33,7 @@
 
         [DisplayName("Mật khẩu")]
         [Required]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$")]
+        //[RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$")]
         [DataType(DataType.Password)]
         [StringLength(50)]
         public string user_pass { get; set; }
@@ -45,6 +41,7 @@
 
         [DisplayName("Ngày sinh")]
         [Column(TypeName = "date")]
+        [Required(ErrorMessage ="Vui lòng nhập ngày sinh theo định dạng mm/dd/yyyy")]
         public DateTime? birthday { get; set; }
 
         [Required]
@@ -61,7 +58,7 @@
         [StringLength(250)]
         public string address { get; set; }
 
-        
+
         public int? role_id { get; set; }
 
         [DisplayName("Quyền hạn")]

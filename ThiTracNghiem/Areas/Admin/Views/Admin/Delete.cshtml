@@ -23,62 +23,62 @@
                             @Html.DisplayFor(model => model.username)
                         </dd>*@
                     <div class="row">
-                    <dt>  @Html.DisplayNameFor(model => model.firstName) @Html.DisplayNameFor(model => model.lastName) : </dt>
+                        <dt>  @Html.DisplayNameFor(model => model.fullName) : </dt>
 
-                    <dd> @Html.DisplayFor(model => model.firstName) @Html.DisplayFor(model => model.lastName) </dd>
-            </div>
-            <div class="row">
-                <dt> @Html.DisplayNameFor(model => model.birthday) : </dt>
-
-                <dd> @Model.birthday.Value.ToString("dd/MM/yyyy")</dd>
-            </div>
-            <div class="row">
-                <dt>
-                    @Html.DisplayNameFor(model => model.email)  :
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.email)
-                </dd>
-            </div>
-            <div class="row">
-                <dt>
-                    @Html.DisplayNameFor(model => model.phone) :
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.phone)
-                </dd>
-            </div>
-            <div class="row">
-                <dt>
-                    @Html.DisplayNameFor(model => model.address) :
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.address)
-                </dd>
-            </div>
-            <div class="row">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Role.role_name)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.Role.role_name)
-                </dd>
-            </div>
-            </dl>
-            @using (Html.BeginForm())
-            {
-@Html.AntiForgeryToken()
-
-                <div class="modal-footer">
-                    <div class="form-actions no-color">
-                        <input type="submit" value="Xóa" class="btn btn-success" /> |
-                        @Html.ActionLink("Hủy", "Index", "Admin", new { @class = "btn btn-secondary" })
+                        <dd> @Html.DisplayFor(model => model.fullName)</dd>
                     </div>
-                </div>}
+                    <div class="row">
+                        <dt> @Html.DisplayNameFor(model => model.birthday) : </dt>
+
+                        <dd> @Model.birthday.Value.ToString("dd/MM/yyyy")</dd>
+                    </div>
+                    <div class="row">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.email)  :
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.email)
+                        </dd>
+                    </div>
+                    <div class="row">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.phone) :
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.phone)
+                        </dd>
+                    </div>
+                    <div class="row">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.address) :
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.address)
+                        </dd>
+                    </div>
+                    <div class="row">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Role.role_name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Role.role_name)
+                        </dd>
+                    </div>
+                </dl>
+                    @using (Html.BeginForm())
+                    {
+                    @Html.AntiForgeryToken()
+
+                        <div class="modal-footer">
+                            <div class="form-actions no-color">
+                                 <input type="submit" value="Xóa" class="btn btn-success" /> |
+                                 @Html.ActionLink("Hủy", "Index", "Admin", new { @class = "btn btn-secondary" })
+                            </div>
+                        </div>}
         </div>
     </div>
 </div>
